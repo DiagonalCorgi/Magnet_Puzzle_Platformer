@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ElectroMagnet : MonoBehaviour 
 {
-    [Range(4.0f, 2000.0f)]
+    [Range(-100.0f, 100.0f)]
     public float MagnetForce;
 
     Magnet[] m_magnets;

@@ -62,15 +62,23 @@ public class MagnetWorld : MonoBehaviour
         var f = CalculateGilbertForce(m1, m2);
         var magnetForce = m1.MagnetForce * m2.MagnetForce;
 
-        accF1 += f * magnetForce;
-      }
+        float mag_dist = Vector3.Distance(m1.transform.position, m2.transform.position);
+        if (mag_dist < 10f)
+         {
+           accF1 += f * magnetForce;
+         }
+       }
 
       if (accF1.magnitude > MaxForce)
       {
         accF1 = accF1.normalized * MaxForce;
       }
-      rb1.AddForceAtPosition(accF1, m1.transform.position);
-    }
+
+     rb1.AddForceAtPosition(accF1, m1.transform.position);
+     }
+
+
+
   }
 
   void OnDrawGizmos()
