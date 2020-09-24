@@ -63,7 +63,7 @@ public class LadderMovment : MonoBehaviour
 
         inputVertical = Input.GetAxisRaw("VerticalPlayer" + player);
 
-        rb.velocity = new Vector3(rb.position.x, inputVertical * speed, rb.position.z);
+        rb.velocity = new Vector3(0, inputVertical * speed, 0);
         rb.useGravity = false;
     }
 
@@ -79,6 +79,15 @@ public class LadderMovment : MonoBehaviour
         if (other.tag == "Ladder")
         {
             ladderInRange = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Ladder")
+        {
+            ladderInRange = false;
+            rb.useGravity = true;
         }
     }
 

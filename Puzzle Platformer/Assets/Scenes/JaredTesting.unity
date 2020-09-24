@@ -151,8 +151,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.281767, y: 1, z: 1}
-  m_Center: {x: -0.140884, y: 0, z: 0}
+  m_Size: {x: 0.5948852, y: 1, z: 1}
+  m_Center: {x: -0.4843236, y: 0, z: 0}
 --- !u!23 &137486369
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838390fc2d1d4de4aa533ce3e7676b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
 --- !u!1 &754465301
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838390fc2d1d4de4aa533ce3e7676b61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
 --- !u!1 &1917743066
 GameObject:
   m_ObjectHideFlags: 0
