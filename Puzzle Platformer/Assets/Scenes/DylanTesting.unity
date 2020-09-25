@@ -131,8 +131,8 @@ GameObject:
   - component: {fileID: 133013254}
   - component: {fileID: 133013255}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: GameObject1
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,8 +278,8 @@ GameObject:
   - component: {fileID: 503014031}
   - component: {fileID: 503014032}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: GameObject2
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 586289042}
   - component: {fileID: 586289041}
   - component: {fileID: 586289040}
+  - component: {fileID: 586289046}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Player2
@@ -436,6 +437,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586289046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586289039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826102e3e193a07498983455e9054b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnet: {fileID: 503014032}
 --- !u!1 &815389405
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826102e3e193a07498983455e9054b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnet: {fileID: 0}
+  magnet: {fileID: 133013255}
 --- !u!1 &961930291
 GameObject:
   m_ObjectHideFlags: 0
