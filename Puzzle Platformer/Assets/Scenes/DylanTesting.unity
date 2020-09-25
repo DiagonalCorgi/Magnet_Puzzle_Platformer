@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeff0c8cf245324191b3e402b6c637e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagnetForce: 10
+  MagnetForce: 0
   MagneticPole: 1
   RigidBody: {fileID: 815389411}
 --- !u!1 &284615132
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edeff0c8cf245324191b3e402b6c637e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagnetForce: 10
+  MagnetForce: 0
   MagneticPole: 0
   RigidBody: {fileID: 586289040}
 --- !u!1 &586289039
@@ -449,7 +449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826102e3e193a07498983455e9054b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnet: {fileID: 503014032}
+  magnet: {fileID: 0}
+  playerTag: 
 --- !u!1 &815389405
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826102e3e193a07498983455e9054b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnet: {fileID: 133013255}
+  magnet: {fileID: 0}
+  playerTag: 
 --- !u!1 &961930291
 GameObject:
   m_ObjectHideFlags: 0
