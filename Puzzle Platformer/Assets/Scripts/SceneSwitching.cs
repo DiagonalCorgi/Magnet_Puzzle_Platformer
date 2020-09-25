@@ -11,7 +11,7 @@ public class SceneSwitching : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentScene = SceneManager.sceneCountInBuildSettings;
+        currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
