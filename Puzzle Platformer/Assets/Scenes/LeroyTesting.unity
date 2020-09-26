@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.5, g: 0.46684298, b: 0.4316038, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2834550}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5620,7 +5620,7 @@ GameObject:
   - component: {fileID: 210104028}
   - component: {fileID: 210104030}
   - component: {fileID: 210104029}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BodyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6564,7 +6564,7 @@ GameObject:
   - component: {fileID: 272284353}
   - component: {fileID: 272284355}
   - component: {fileID: 272284354}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Blue Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11961,7 +11961,7 @@ GameObject:
   - component: {fileID: 358234034}
   - component: {fileID: 358234036}
   - component: {fileID: 358234035}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LegPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13311,7 +13311,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 5
+  m_Intensity: 2
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -13534,6 +13534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a76cb5dc63eef44f85dddd87dfd5adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  body: {fileID: 2834550}
 --- !u!65 &462095342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13919,7 +13920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611435604}
   - component: {fileID: 611435605}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18845,7 +18846,7 @@ GameObject:
   - component: {fileID: 643704386}
   - component: {fileID: 643704388}
   - component: {fileID: 643704387}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BodyGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18923,6 +18924,7 @@ GameObject:
   - component: {fileID: 644588467}
   - component: {fileID: 644588466}
   - component: {fileID: 644588465}
+  - component: {fileID: 644588468}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18995,6 +18997,66 @@ Transform:
   m_Father: {fileID: 218723062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+--- !u!114 &644588468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644588464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 644588467}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &714500452
 GameObject:
   m_ObjectHideFlags: 0
@@ -19171,13 +19233,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718502777}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.46122473, y: 0.49839905, z: 0.32081753, w: 0.66026235}
   m_LocalPosition: {x: -10.87, y: 2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 218723062}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.814001, y: 85.342, z: 67.346}
 --- !u!1 &728501095
 GameObject:
   m_ObjectHideFlags: 0
@@ -26629,7 +26691,7 @@ Transform:
   m_GameObject: {fileID: 1154707514}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -11.71, z: 10}
-  m_LocalScale: {x: 1, y: 23.358, z: 124.310005}
+  m_LocalScale: {x: 3.1275, y: 23.358, z: 124.310005}
   m_Children: []
   m_Father: {fileID: 218723062}
   m_RootOrder: 2
@@ -37714,7 +37776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351886671}
   - component: {fileID: 1351886672}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38167,7 +38229,7 @@ GameObject:
   - component: {fileID: 1409745129}
   - component: {fileID: 1409745131}
   - component: {fileID: 1409745130}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: BlueMinus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42918,7 +42980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1447229750}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LegRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43502,7 +43564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1509498662}
   - component: {fileID: 1509498663}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44871,7 +44933,7 @@ GameObject:
   - component: {fileID: 1675117432}
   - component: {fileID: 1675117434}
   - component: {fileID: 1675117433}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Blue Circles Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51004,7 +51066,7 @@ GameObject:
   - component: {fileID: 1797260814}
   - component: {fileID: 1797260816}
   - component: {fileID: 1797260815}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Big Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51068,7 +51130,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 2
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.8
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -51921,7 +51983,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.4
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -52360,7 +52422,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0, g: 0.77467656, b: 1, a: 0}
-        key1: {r: 0, g: 0.77358484, b: 1, a: 0.23529412}
+        key1: {r: 0, g: 0.77358484, b: 1, a: 0.1254902}
         key2: {r: 0.6462264, g: 0.98175657, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -55757,7 +55819,7 @@ GameObject:
   - component: {fileID: 1806548676}
   - component: {fileID: 1806548678}
   - component: {fileID: 1806548677}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Big Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55821,7 +55883,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 2
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.8
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -57112,7 +57174,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0.31117582, b: 1, a: 0.23529412}
+        key0: {r: 0.3915094, g: 0.7637623, b: 1, a: 0.2901961}
         key1: {r: 0, g: 0.30980393, b: 1, a: 0.15686275}
         key2: {r: 0.6462264, g: 0.98175657, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -61061,7 +61123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878021990}
   - component: {fileID: 1878021991}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61695,7 +61757,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2009407124}
   - component: {fileID: 2009407125}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61866,7 +61928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017985967}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LegLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62256,6 +62318,54 @@ Transform:
   m_Father: {fileID: 218723062}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &2055450901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2055450903}
+  - component: {fileID: 2055450902}
+  m_Layer: 9
+  m_Name: PostProcessing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2055450902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055450901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: d8ff74fa7f6afb840a87e55f16ad7391, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!4 &2055450903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055450901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.63605094, y: 2.9963305, z: -0.60678244}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064025748
 GameObject:
   m_ObjectHideFlags: 0
@@ -62397,7 +62507,7 @@ Projector:
   m_Material: {fileID: 2100000, guid: e0ab8c5f8bcb999449812c75cb759cae, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 4
+    m_Bits: 310
 --- !u!1 &2077916516
 GameObject:
   m_ObjectHideFlags: 0
