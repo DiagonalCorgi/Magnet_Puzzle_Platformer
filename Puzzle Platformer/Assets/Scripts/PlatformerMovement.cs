@@ -12,6 +12,7 @@ public class PlatformerMovement : MonoBehaviour
     bool player1;
     bool player2;
     bool grounded;
+    public Transform body;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +55,13 @@ public class PlatformerMovement : MonoBehaviour
         }
 
 
+        //update animation
+        GetComponent<Animator>().SetFloat("Speed", Mathf.Min(Mathf.Abs(rigidbody.velocity.x * 1f), 2));
+        if (body && Mathf.Abs(rigidbody.velocity.x) > 0.01f)
+        {
+            body.localScale = new Vector3(-Mathf.Abs(body.localScale.x) * Mathf.Sign(rigidbody.velocity.x), body.localScale.y, body.localScale.z);
         }
+    }
 
     public void MovePlayer(int player)
     {
@@ -87,6 +94,7 @@ public class PlatformerMovement : MonoBehaviour
                 
                 if (grounded)
                 {
+                    GetComponent<Animator>().SetTrigger("Jump");
                     rigidbody.AddForce(transform.TransformDirection(Vector3.up * jumpHeight), ForceMode.Impulse);
 
                 }
