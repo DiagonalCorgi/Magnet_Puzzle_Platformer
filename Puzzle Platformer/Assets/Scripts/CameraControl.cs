@@ -10,6 +10,7 @@ public class CameraControl : MonoBehaviour
     public float zoomValue = 1;
     [Range(0, 1)]
     public float responsiveness = 0.1f;
+    public Vector2 playerOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class CameraControl : MonoBehaviour
         }
 
         newPos = transform.position + (targetPos - transform.position) * responsiveness;
-        transform.position = new Vector3(newPos.x, newPos.y, offset);
+        transform.position = new Vector3(newPos.x +playerOffset.x * (1 / zoomValue), newPos.y + playerOffset.y * (1 / zoomValue), offset);
     }
 
     public void ZoomCamera()
