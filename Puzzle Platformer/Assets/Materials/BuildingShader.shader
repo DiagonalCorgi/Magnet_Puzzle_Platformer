@@ -1,4 +1,6 @@
-﻿Shader "Custom/BuildingShader"
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+Shader "Custom/BuildingShader"
 {
     Properties
     {
@@ -74,8 +76,15 @@
             float2 uv_MainTex;
         };
 
-        float rand(float3 myVector) {
-            return frac(sin(dot(myVector, float3(12.9898, 78.233, 45.5432))) * 43758.5453);
+        float random(float2 p)
+        {
+            // e^pi (Gelfond's constant)
+            // 2^sqrt(2) (Gelfond–Schneider constant)
+            float2 K1 = float2(23.14069263277926, 2.665144142690225);
+
+            //return fract( cos( mod( 12345678., 256. * dot(p,K1) ) ) ); // ver1
+            //return fract(cos(dot(p,K1)) * 123456.); // ver2
+            return frac(cos(dot(p, K1)) * 12345.6789); // ver3
         }
 
         void surf (Input IN, inout SurfaceOutput o)
@@ -90,7 +99,8 @@
                 length(float3(unity_ObjectToWorld[0].z, unity_ObjectToWorld[1].z, unity_ObjectToWorld[2].z))  // scale z axis
                 );
 
-            float2 randPos = float2(rand(15), rand(8)) * 1;
+            float4 objectOrigin = mul(unity_ObjectToWorld, float4(0.0, 0.0, 0.0, 1.0));
+            float2 randPos = float2(random(objectOrigin.xz), random(objectOrigin.xz)) * 200.0;
             float3 pos = mul(unity_WorldToObject, IN.worldPos) * worldScale;
             float3 norm = normalize(mul(unity_WorldToObject, IN.worldNormal));
 

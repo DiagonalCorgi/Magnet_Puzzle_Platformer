@@ -12388,7 +12388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389481016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.583168, y: -80.3, z: -95.43599}
+  m_LocalPosition: {x: 27.7, y: -80.3, z: -96.7}
   m_LocalScale: {x: 22.501715, y: 220.82167, z: 22.501715}
   m_Children: []
   m_Father: {fileID: 218723062}
@@ -19079,8 +19079,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players:
   - {fileID: 462095338}
+  - {fileID: 1573312405}
   zoomValue: 2
-  responsiveness: 0.687
+  panResponsiveness: 0.432
+  zoomResponsiveness: 0.45
+  tiltResponsiveness: 0.1
   playerOffset: {x: 0, y: 1.5}
 --- !u!1 &714500452
 GameObject:
@@ -19203,7 +19206,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
