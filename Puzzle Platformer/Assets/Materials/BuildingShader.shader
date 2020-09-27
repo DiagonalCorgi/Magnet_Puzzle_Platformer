@@ -10,6 +10,7 @@
         _Scale ("Texture Scale", Range(0,1)) = 0.1
         _Intensity("Emission Intensity", Float) = 2
         _BRDF("BRDF Ramp", 2D) = "gray" {}
+        _LightIntensity("Light Intensity", Float) = 200
     }
     SubShader
     {
@@ -31,6 +32,7 @@
         fixed4 _Color;
         float _Scale;
         float _Intensity;
+        float _LightIntensity;
 
         sampler2D _BRDF;
 
@@ -60,7 +62,7 @@
 
             // For illustrative purpsoes, let's set the pixel colour based entirely on the BRDF texture
             // In practice, you'd normally also have Albedo and lightcolour terms here too. 
-            c.rgb = s.Albedo + _LightColor0.rgb * brdf * (atten * 200);
+            c.rgb = s.Albedo + _LightColor0.rgb * brdf * (atten * _LightIntensity);
             c.a = s.Alpha;
             return c;
         }
@@ -109,7 +111,7 @@
             }
 
             o.Albedo = c.rgb * _Color;
-            o.Emission = e.rgb * _Color * _Intensity;
+            o.Emission = c.rgb + e.rgb * _Color * _Intensity;
         }
         ENDCG
     }
