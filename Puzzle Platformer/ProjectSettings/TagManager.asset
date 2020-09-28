@@ -18,12 +18,12 @@ TagManager:
   - 
   - Ground
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - RedParticleForcefield
+  - BlueParticleForcefield
+  - P1_Blue
+  - P2_Blue
+  - P1_Red
+  - P2_Red
   - 
   - 
   - 
