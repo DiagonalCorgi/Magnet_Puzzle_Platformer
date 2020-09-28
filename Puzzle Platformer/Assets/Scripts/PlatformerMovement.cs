@@ -6,12 +6,12 @@ public class PlatformerMovement : MonoBehaviour
 {
 
     float movementSpeed = 20f;
-    float jumpHeight = 5f;
+    float jumpHeight = 6f;
     LayerMask layerMask = 8;
     Rigidbody rigidbody;
     bool player1;
     bool player2;
-    bool grounded;
+    public bool grounded;
     public Transform body;
 
     // Start is called before the first frame update
@@ -31,8 +31,9 @@ public class PlatformerMovement : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         if (player1)
@@ -67,16 +68,18 @@ public class PlatformerMovement : MonoBehaviour
     {
         if (Input.GetButton("HorizontalPlayer" + player))
         {
+            //Moving right
             if (Input.GetAxis("HorizontalPlayer" + player) > 0f)
             {
-                if (rigidbody.velocity.x < 6f)
+                if (rigidbody.velocity.x <= 0f || Mathf.Abs(rigidbody.velocity.x) < 6f)
                 {
                     rigidbody.AddForce(new Vector3(movementSpeed, 0f, 0f), ForceMode.Acceleration);
                 }
             }
+            //moving left
             else if (Input.GetAxis("HorizontalPlayer" + player) < 0f)
             {
-                if (rigidbody.velocity.x < 6f)
+                if (rigidbody.velocity.x >= 0f || Mathf.Abs(rigidbody.velocity.x) < 6f)
                 {
                     rigidbody.AddForce(new Vector3(-movementSpeed, 0f, 0f), ForceMode.Acceleration);
                 }
