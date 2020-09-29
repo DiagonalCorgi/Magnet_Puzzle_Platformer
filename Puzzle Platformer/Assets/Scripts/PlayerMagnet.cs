@@ -12,6 +12,8 @@ public class PlayerMagnet : MonoBehaviour
     public Texture northGlow;
     public GameObject bodyBase;
     public GameObject bodyGlow;
+    public GameObject blueParticles;
+    public GameObject redParticles;
 
     public Magnet magnet;
     public string playerTag;
@@ -22,6 +24,8 @@ public class PlayerMagnet : MonoBehaviour
         bodyBase.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", neutralBody);
         bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", neutralBody);
         bodyGlow.GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
+        redParticles.SetActive(false);
+        blueParticles.SetActive(false);
         playerTag = gameObject.tag;
         magnet = GetComponentInChildren<Magnet>();
     }
@@ -43,6 +47,8 @@ public class PlayerMagnet : MonoBehaviour
             bodyBase.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northBody);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", northGlow);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
+            redParticles.SetActive(true);
+            blueParticles.SetActive(false);
             magnet.MagnetForce = 15;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
@@ -55,6 +61,8 @@ public class PlayerMagnet : MonoBehaviour
             bodyBase.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southBody);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", southGlow);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
+            redParticles.SetActive(false);
+            blueParticles.SetActive(true);
             magnet.MagnetForce = 15;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
@@ -66,6 +74,8 @@ public class PlayerMagnet : MonoBehaviour
             bodyBase.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", neutralBody);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", neutralBody);
             bodyGlow.GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
+            redParticles.SetActive(false);
+            blueParticles.SetActive(false);
             magnet.MagnetForce = 0;
             Debug.Log("Neutral");
         }
@@ -77,6 +87,8 @@ public class PlayerMagnet : MonoBehaviour
             bodyBase.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northBody);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", northGlow);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
+            redParticles.SetActive(true);
+            blueParticles.SetActive(false);
             magnet.MagnetForce = 15;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
@@ -89,6 +101,8 @@ public class PlayerMagnet : MonoBehaviour
             bodyBase.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southBody);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", southGlow);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
+            redParticles.SetActive(false);
+            blueParticles.SetActive(true);
             magnet.MagnetForce = 15;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
@@ -100,6 +114,8 @@ public class PlayerMagnet : MonoBehaviour
             bodyBase.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", neutralBody);
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", neutralBody);
             bodyGlow.GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
+            redParticles.SetActive(false);
+            blueParticles.SetActive(false);
             magnet.MagnetForce = 0;
             Debug.Log("Neutral");
         }
