@@ -28,24 +28,12 @@ public class MagneticObject : MonoBehaviour
     {
 
 
-        Vector3 collisionDirection;
-        float distance;
-        Physics.ComputePenetration(collision.other.GetComponent<Collider>(), collision.other.transform.position +Vector3.down*1f, collision.other.transform.rotation, gameObject.GetComponent<Collider>(), transform.position, transform.rotation, out collisionDirection, out distance);  
-
-
-
+       
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
-            if (distance > 0.01f)
-            {
-                rb.isKinematic = false;
-            }
-            else
-            {
-                rb.isKinematic = true;
-            }
-            
-            
+            rb.isKinematic = true;
+
+
         }   
     }
 
