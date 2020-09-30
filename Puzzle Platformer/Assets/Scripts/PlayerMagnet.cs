@@ -17,6 +17,7 @@ public class PlayerMagnet : MonoBehaviour
 
     public Magnet magnet;
     public string playerTag;
+    public float magnetForce = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +34,13 @@ public class PlayerMagnet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject magneticObject = GameObject.FindGameObjectWithTag("Magnetic Object");
         GameObject player1 = GameObject.FindGameObjectWithTag("Player1");
         var player1Renderer = player1.GetComponent<Renderer>();
 
         GameObject player2 = GameObject.FindGameObjectWithTag("Player2");
         var player2Renderer = player2.GetComponent<Renderer>();
+
 
         if (Input.GetButtonDown("NorthPolarityPlayer1") && playerTag == "Player1")
         {
@@ -49,7 +52,7 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
             redParticles.SetActive(true);
             blueParticles.SetActive(false);
-            magnet.MagnetForce = 15;
+            magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
         }
@@ -63,7 +66,7 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
             redParticles.SetActive(false);
             blueParticles.SetActive(true);
-            magnet.MagnetForce = 15;
+            magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
         }
@@ -89,7 +92,7 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
             redParticles.SetActive(true);
             blueParticles.SetActive(false);
-            magnet.MagnetForce = 15;
+            magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
         }
@@ -103,7 +106,7 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
             redParticles.SetActive(false);
             blueParticles.SetActive(true);
-            magnet.MagnetForce = 15;
+            magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
         }
