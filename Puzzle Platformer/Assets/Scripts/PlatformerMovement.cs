@@ -7,7 +7,6 @@ public class PlatformerMovement : MonoBehaviour
 
     float movementSpeed = 20f;
     float jumpHeight = 6f;
-    LayerMask layerMask = 8;
     Rigidbody rigidbody;
     bool player1;
     bool player2;
@@ -17,7 +16,6 @@ public class PlatformerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        layerMask = ~layerMask;
         rigidbody = gameObject.GetComponent<Rigidbody>();
         if (gameObject.tag == "Player1")
         {
@@ -46,7 +44,8 @@ public class PlatformerMovement : MonoBehaviour
         }
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.55f, layerMask))
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.55f, LayerMask.GetMask("Ground")))
         {
             grounded = true;
         }

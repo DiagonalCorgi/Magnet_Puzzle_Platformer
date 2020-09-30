@@ -5,7 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
 
-    bool beingPressed;
+    public bool beingPressed;
     GameObject[] objectsPressing;
     Animator buttonAnimator;
 
