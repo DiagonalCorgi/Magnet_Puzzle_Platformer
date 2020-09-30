@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMagnet : MonoBehaviour
 {
@@ -10,14 +11,22 @@ public class PlayerMagnet : MonoBehaviour
     public Texture neutralBody;
     public Texture southGlow;
     public Texture northGlow;
+    public GameObject leftLeg;
+    public GameObject rightLeg;
     public GameObject bodyBase;
     public GameObject bodyGlow;
     public GameObject blueParticles;
     public GameObject redParticles;
 
+    public SceneSwitching sceneSwitcher;
+
+    public float gBValues;
+    public float colourChangeTime = 3f;
+
     public Magnet magnet;
     public string playerTag;
-    public float magnetForce = 15f;
+    public float magnetForce = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +38,7 @@ public class PlayerMagnet : MonoBehaviour
         blueParticles.SetActive(false);
         playerTag = gameObject.tag;
         magnet = GetComponentInChildren<Magnet>();
+        sceneSwitcher = GameObject.Find("SceneSwitcher").GetComponent<SceneSwitching>();
     }
 
     // Update is called once per frame
@@ -123,6 +133,29 @@ public class PlayerMagnet : MonoBehaviour
             Debug.Log("Neutral");
         }
 
+        if (gBValues > 1f)
+        {
+            sceneSwitcher.RestartScene();
+        }
+        else if (gBValues > 0f)
+        {
+            gBValues += (colourChangeTime * Time.deltaTime);
+            leftLeg.GetComponent<SpriteRenderer>().color = new Color(1f, gBValues, gBValues, 1f);
+            rightLeg.GetComponent<SpriteRenderer>().color = new Color(1f, gBValues, gBValues, 1f);
+            bodyBase.GetComponent<MeshRenderer>().material.color = new Color(1f, gBValues, gBValues, 1f);
+            bodyGlow.GetComponent<MeshRenderer>().material.color = new Color(1f, gBValues, gBValues, 1f);
+            Debug.Log(gBValues);
+        }
+
+    }
+
+    public void Die()
+    {
+        leftLeg.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f);
+        rightLeg.GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0f, 1f);
+        bodyBase.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 1f);
+        bodyGlow.GetComponent<MeshRenderer>().material.color = new Color(1, 0, 0, 1f);
+        gBValues += (1/colourChangeTime * Time.deltaTime);
 
     }
 }
