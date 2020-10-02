@@ -507,7 +507,7 @@ Material:
     - _SSSSCale: 0.25
     - _SSSThicknessMod: 0
     - _SampleWorld: 0
-    - _Saturation: 0
+    - _Saturation: 0.349
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0
     - _ShadowMix: 0
