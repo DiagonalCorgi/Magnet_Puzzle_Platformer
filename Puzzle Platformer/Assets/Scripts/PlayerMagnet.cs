@@ -17,11 +17,16 @@ public class PlayerMagnet : MonoBehaviour
     public GameObject bodyGlow;
     public GameObject blueParticles;
     public GameObject redParticles;
+    public AudioSource jump;
+    public AudioSource magnet_on;
+    public AudioSource magnet_off;
+    public AudioSource magnet_switch;
+    public AudioSource die;
 
     public SceneSwitching sceneSwitcher;
 
     public float gBValues;
-    public float colourChangeTime = 3f;
+    public float colourChangeTime = 0.1f;
 
     public Magnet magnet;
     public string playerTag;
@@ -62,9 +67,21 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
             redParticles.SetActive(true);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.South)
+            {
+                magnet_switch.Play(0);
+            }
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
+
         }
         if (Input.GetButtonDown("SouthPolarityPlayer1") && playerTag == "Player1")
         {
@@ -76,6 +93,18 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
             redParticles.SetActive(false);
             blueParticles.SetActive(true);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_switch.Play(0);
+            }
+            
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
@@ -89,6 +118,13 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
             redParticles.SetActive(false);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_off.Play(0);
+            }
+
             magnet.MagnetForce = 0;
             Debug.Log("Neutral");
         }
@@ -102,6 +138,17 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
             redParticles.SetActive(true);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.South)
+            {
+                magnet_switch.Play(0);
+            }
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
@@ -116,6 +163,17 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
             redParticles.SetActive(false);
             blueParticles.SetActive(true);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_switch.Play(0);
+            }
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
@@ -129,6 +187,15 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
             redParticles.SetActive(false);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_off.Play(0);
+            }
+            
+
+
             magnet.MagnetForce = 0;
             Debug.Log("Neutral");
         }
@@ -139,7 +206,7 @@ public class PlayerMagnet : MonoBehaviour
         }
         else if (gBValues > 0f)
         {
-            gBValues += (colourChangeTime * Time.deltaTime);
+            gBValues += 0.5f * (colourChangeTime * Time.deltaTime);
             leftLeg.GetComponent<SpriteRenderer>().color = new Color(1f, gBValues, gBValues, 1f);
             rightLeg.GetComponent<SpriteRenderer>().color = new Color(1f, gBValues, gBValues, 1f);
             bodyBase.GetComponent<MeshRenderer>().material.color = new Color(1f, gBValues, gBValues, 1f);
@@ -151,6 +218,7 @@ public class PlayerMagnet : MonoBehaviour
 
     public void Die()
     {
+        die.Play(0);
         leftLeg.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f);
         rightLeg.GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0f, 1f);
         bodyBase.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 1f);
