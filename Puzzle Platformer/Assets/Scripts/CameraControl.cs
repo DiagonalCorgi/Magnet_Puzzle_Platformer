@@ -9,7 +9,11 @@ public class CameraControl : MonoBehaviour
     [Range(0.2f,3)]
     public float zoomValue = 1;
     [Range(0, 1)]
-    public float responsiveness = 0.1f;
+    public float panResponsiveness = 0.1f;
+    [Range(0, 1)]
+    public float zoomResponsiveness = 0.1f;
+    [Range(0, 1)]
+    public float tiltResponsiveness = 0.1f;
     public Vector2 playerOffset;
 
     // Start is called before the first frame update
@@ -19,7 +23,7 @@ public class CameraControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MoveCamera();
         ZoomCamera();
@@ -35,11 +39,16 @@ public class CameraControl : MonoBehaviour
         {
             GameObject player = players[playerId];
             cumulativePos += player.transform.position;
-            targetPos = cumulativePos / players.Length;
         }
 
-        newPos = transform.position + (targetPos - transform.position) * responsiveness;
-        transform.position = new Vector3(newPos.x +playerOffset.x * (1 / zoomValue), newPos.y + playerOffset.y * (1 / zoomValue), offset);
+        targetPos = cumulativePos / players.Length;
+        targetPos = new Vector3(targetPos.x + playerOffset.x * (1 / zoomValue), targetPos.y + playerOffset.y * (1 / zoomValue), targetPos.z);
+
+        newPos = transform.position + (targetPos - transform.position) * panResponsiveness * 10 * Time.deltaTime;
+        transform.position = new Vector3(newPos.x, newPos.y, offset);
+
+        //tilt camera in direction of motion
+        Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation, Quaternion.LookRotation(targetPos - Camera.main.transform.position, Vector3.up), 50 * tiltResponsiveness * Time.deltaTime);
     }
 
     public void ZoomCamera()
@@ -55,7 +64,7 @@ public class CameraControl : MonoBehaviour
         }
 
         float newZoomValue = Mathf.Min( 1, 0.8f / furthestPlayerPos.x, 0.8f / furthestPlayerPos.y);
-        zoomValue += (Mathf.Clamp(newZoomValue, 0.2f, 3f) - zoomValue) * responsiveness;
+        zoomValue += (Mathf.Clamp(newZoomValue, 0.2f, 3f) - zoomValue) * zoomResponsiveness * 10 * Time.deltaTime;
         
         transform.position = new Vector3(transform.position.x, transform.position.y, offset * (1 / zoomValue));
     }
