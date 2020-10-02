@@ -280,7 +280,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
-        m_Texture: {fileID: 2800000, guid: 8564c855359f2204993a7fd70ef6c5b0, type: 3}
+        m_Texture: {fileID: 2800000, guid: b5f003689e8f40c469bd657afcae3615, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp1:
@@ -517,7 +517,7 @@ Material:
     - _RGBMaskEnabled: 0
     - _RGBMaskUV: 0
     - _RGBRed_UV: 0
-    - _RimBrighten: 2.29
+    - _RimBrighten: 2.23
     - _RimEnviroBlur: 0.327
     - _RimEnviroIntensity: 0.464
     - _RimEnviroMinBrightness: 0.241
@@ -528,7 +528,7 @@ Material:
     - _RimLightingInvert: 0
     - _RimSharpness: 0.121
     - _RimStrength: 0.2
-    - _RimWidth: 1
+    - _RimWidth: 0.437
     - _RimWidthNoiseStrength: 0
     - _SSSDistortion: 1
     - _SSSPower: 5
@@ -544,7 +544,7 @@ Material:
     - _ShadowOffset: 0
     - _ShadowOffset1: 0
     - _ShadowOffset2: 0
-    - _ShadowStrength: 0.2
+    - _ShadowStrength: 1
     - _Smoothness: 0
     - _SmoothnessFrom: 1
     - _SmoothnessFrom1: 1
@@ -659,7 +659,7 @@ Material:
     - m_end_subsurface: 0
     - m_end_vertexManipulation: 0
     - m_lightingOptions: 1
-    - m_mainOptions: 0
+    - m_mainOptions: 1
     - m_reflectionOptions: 1
     - m_renderingOptions: 0
     - m_start_Alpha: 0
