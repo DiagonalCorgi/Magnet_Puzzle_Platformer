@@ -9,7 +9,6 @@ public class ExitArea : MonoBehaviour
     bool player1Exiting;
     bool player2Exiting;
     SceneSwitching sceneSwitcher;
-    public int currentScene;
     public Image blackFade;
     float fadeOutTime;
     float fadeAmount;
@@ -19,9 +18,6 @@ public class ExitArea : MonoBehaviour
     void Start()
     {
         sceneSwitcher = GameObject.Find("SceneSwitcher").GetComponent<SceneSwitching>();
-        currentScene = sceneSwitcher.currentScene;
-        Debug.Log(currentScene);
-        blackFade = GameObject.Find("Canvas").GetComponentInChildren<Image>();
         blackFade.color = new Color(blackFade.color.r, blackFade.color.g, blackFade.color.b, 1f);
         fadeOutTime = 0.5f;
         StartCoroutine("SceneFadeIn");
@@ -76,7 +72,7 @@ public class ExitArea : MonoBehaviour
             yield return null;
 
         }
-        sceneSwitcher.NextScene(currentScene);
+        sceneSwitcher.NextScene();
     }
 
     private IEnumerator SceneFadeIn()
