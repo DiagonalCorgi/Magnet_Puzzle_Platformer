@@ -6,18 +6,16 @@ public class PlatformerMovement : MonoBehaviour
 {
 
     float movementSpeed = 20f;
-    float jumpHeight = 5f;
-    LayerMask layerMask = 8;
+    float jumpHeight = 6f;
     Rigidbody rigidbody;
     bool player1;
     bool player2;
-    bool grounded;
+    public bool grounded;
     public Transform body;
 
     // Start is called before the first frame update
     void Start()
     {
-        layerMask = ~layerMask;
         rigidbody = gameObject.GetComponent<Rigidbody>();
         if (gameObject.tag == "Player1")
         {
@@ -31,8 +29,9 @@ public class PlatformerMovement : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         if (player1)
@@ -45,7 +44,8 @@ public class PlatformerMovement : MonoBehaviour
         }
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.55f, layerMask))
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 0.55f, LayerMask.GetMask("Ground")))
         {
             grounded = true;
         }
@@ -67,16 +67,18 @@ public class PlatformerMovement : MonoBehaviour
     {
         if (Input.GetButton("HorizontalPlayer" + player))
         {
+            //Moving right
             if (Input.GetAxis("HorizontalPlayer" + player) > 0f)
             {
-                if (rigidbody.velocity.x < 6f)
+                if (rigidbody.velocity.x <= 0f || Mathf.Abs(rigidbody.velocity.x) < 6f)
                 {
                     rigidbody.AddForce(new Vector3(movementSpeed, 0f, 0f), ForceMode.Acceleration);
                 }
             }
+            //moving left
             else if (Input.GetAxis("HorizontalPlayer" + player) < 0f)
             {
-                if (rigidbody.velocity.x < 6f)
+                if (rigidbody.velocity.x >= 0f || Mathf.Abs(rigidbody.velocity.x) < 6f)
                 {
                     rigidbody.AddForce(new Vector3(-movementSpeed, 0f, 0f), ForceMode.Acceleration);
                 }

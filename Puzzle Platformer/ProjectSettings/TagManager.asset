@@ -7,6 +7,7 @@ TagManager:
   - Player1
   - Player2
   - Ladder
+  - Magnetic Object
   layers:
   - Default
   - TransparentFX
@@ -18,12 +19,12 @@ TagManager:
   - 
   - Ground
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - RedParticleForcefield
+  - BlueParticleForcefield
+  - P1_Blue
+  - P2_Blue
+  - P1_Red
+  - P2_Red
   - 
   - 
   - 

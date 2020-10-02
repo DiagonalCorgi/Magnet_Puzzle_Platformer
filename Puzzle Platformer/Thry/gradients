@@ -1,2 +1,3 @@
 gradient_-1203896656:={"colorKeys":[{"color":{"r":0.5058824,"g":0.5019608,"b":0.5058824,"a":1},"time":0},{"color":{"r":1,"g":1,"b":1,"a":1},"time":1}],"alphaKeys":[{"alpha":1,"time":0},{"alpha":1,"time":1}],"mode":Blend}
 gradient_-1203917376:={"colorKeys":[{"color":{"r":0,"g":0,"b":0,"a":1},"time":0},{"color":{"r":1,"g":1,"b":1,"a":1},"time":1}],"alphaKeys":[{"alpha":1,"time":0},{"alpha":1,"time":1}],"mode":Blend}
+gradient_-617487552:={"colorKeys":[{"color":{"r":0,"g":0,"b":0,"a":1},"time":0},{"color":{"r":1,"g":1,"b":1,"a":1},"time":1}],"alphaKeys":[{"alpha":1,"time":0},{"alpha":1,"time":1}],"mode":Blend}
