@@ -4779,7 +4779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195559484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24000013, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.184, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 495645336}
@@ -14847,7 +14847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751984529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24000013, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.184, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 854056386}
@@ -50092,7 +50092,7 @@ GameObject:
   - component: {fileID: 8280683571569073275}
   - component: {fileID: 354383377330844116}
   - component: {fileID: 9041578028097880799}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BodyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50280,7 +50280,7 @@ GameObject:
   - component: {fileID: 1730869505153574849}
   - component: {fileID: 694980608756731166}
   - component: {fileID: 4956469798018797170}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BodyGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50388,11 +50388,11 @@ Projector:
   m_Enabled: 1
   serializedVersion: 2
   m_NearClipPlane: 0.1
-  m_FarClipPlane: 6
+  m_FarClipPlane: 8
   m_FieldOfView: 60
   m_AspectRatio: 1
-  m_Orthographic: 0
-  m_OrthographicSize: 10
+  m_Orthographic: 1
+  m_OrthographicSize: 0.7
   m_Material: {fileID: 2100000, guid: e0ab8c5f8bcb999449812c75cb759cae, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
@@ -50530,6 +50530,8 @@ GameObject:
   - component: {fileID: 1059049464}
   - component: {fileID: 1059049465}
   - component: {fileID: 1059049454}
+  - component: {fileID: 807871200}
+  - component: {fileID: 156108554}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -50576,8 +50578,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.98, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.87065566, y: 0.6749973, z: 0.7905548}
+  m_Center: {x: 0.0023193955, y: 0.17373037, z: -0.07403496}
 --- !u!114 &28580102325317220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51154,6 +51156,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &807871200
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764485398429826051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4658013
+  m_Height: 0.9477577
+  m_Direction: 1
+  m_Center: {x: -0.0009045005, y: -0.043881774, z: 0.019879878}
+--- !u!136 &156108554
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764485398429826051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4658013
+  m_Height: 0.9477577
+  m_Direction: 1
+  m_Center: {x: -0.0009045005, y: -0.043881774, z: 0.019879878}
 --- !u!1 &7867273953504196788
 GameObject:
   m_ObjectHideFlags: 0

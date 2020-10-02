@@ -10,6 +10,7 @@ public class Button : MonoBehaviour
     Animator buttonAnimator;
     public AudioSource button_down;
     public AudioSource button_up;
+    Renderer renderer;
 
         // Start is called before the first frame update
         void Start()
