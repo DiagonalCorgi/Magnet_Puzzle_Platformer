@@ -50519,7 +50519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3545653963471442591}
   - component: {fileID: 1294135289988692713}
-  - component: {fileID: 2285952520606307318}
+  - component: {fileID: 7676417538531215174}
   - component: {fileID: 28580102325317220}
   - component: {fileID: 5476197867864955928}
   - component: {fileID: 8454848870956135680}
@@ -50530,8 +50530,6 @@ GameObject:
   - component: {fileID: 1059049464}
   - component: {fileID: 1059049465}
   - component: {fileID: 1059049454}
-  - component: {fileID: 807871200}
-  - component: {fileID: 156108554}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -50567,19 +50565,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7764485398429826051}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &2285952520606307318
+--- !u!65 &7676417538531215174
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7764485398429826051}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e44b59672eea1594c9546733ec02aa6e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.87065566, y: 0.6749973, z: 0.7905548}
-  m_Center: {x: 0.0023193955, y: 0.17373037, z: -0.07403496}
+  m_Size: {x: 0.89815426, y: 0.97542524, z: 1}
+  m_Center: {x: 0.0011329651, y: 0.012287378, z: 0}
 --- !u!114 &28580102325317220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51156,34 +51154,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!136 &807871200
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7764485398429826051}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4658013
-  m_Height: 0.9477577
-  m_Direction: 1
-  m_Center: {x: -0.0009045005, y: -0.043881774, z: 0.019879878}
---- !u!136 &156108554
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7764485398429826051}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4658013
-  m_Height: 0.9477577
-  m_Direction: 1
-  m_Center: {x: -0.0009045005, y: -0.043881774, z: 0.019879878}
 --- !u!1 &7867273953504196788
 GameObject:
   m_ObjectHideFlags: 0

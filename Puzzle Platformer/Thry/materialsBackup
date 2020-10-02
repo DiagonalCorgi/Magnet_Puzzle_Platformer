@@ -2,7 +2,7 @@ e988cf88c77b646428a864d7854e3e32:=.poiyomi/Toon/Advanced/Opaque
 66edead370b38114ab61229e17da526f:=.poiyomi/Toon/Advanced/Opaque
 9a74cf45fb216c04c95ca38de639521d:=.poiyomi/Toon/Advanced/Opaque
 606e0ab3f28e78d4b8af9664369f36de:=.poiyomi/Toon/Advanced/Opaque
-0000000000000000f000000000000000:=Sprites/Default
+0000000000000000f000000000000000:=Standard
 512eedb0f9d54094a82f856050621294:=.poiyomi/Toon/Advanced/Opaque
 3b33fa6313319d0408e35d0ea750b94a:=.poiyomi/Toon/Advanced/Opaque
 3eaccd7a5bec0d244afc2063dd388d2c:=.poiyomi/Toon/Advanced/Opaque
@@ -22,4 +22,12 @@ b6636f7d2d5f87149a3e46c1abc557c5:=Standard
 d4f9db1c5e3491541828ea454c63f3fd:=Standard
 :=Particles/Standard Unlit
 
+
+
+
+
 :=Standard
+19be92826818b8a40a9bccbe3a4ab6d6:=Particles/Standard Unlit
+2a88cba1da139ff48ae552e204a6bf4c:=Particles/Standard Unlit
+99059691196002047b05729c183f65a5:=Particles/Standard Unlit
+0b946618b5660d14184215ae18bf88fd:=Custom/BuildingShader
