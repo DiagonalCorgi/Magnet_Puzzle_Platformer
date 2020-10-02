@@ -8,6 +8,8 @@ public class Button : MonoBehaviour
     public bool beingPressed;
     GameObject[] objectsPressing;
     Animator buttonAnimator;
+    public AudioSource button_down;
+    public AudioSource button_up;
 
 
     // Start is called before the first frame update
@@ -26,6 +28,7 @@ public class Button : MonoBehaviour
     {
         beingPressed = true;
         Debug.Log(beingPressed);
+        button_down.Play(0);
         buttonAnimator.SetBool("IsDown", true);
     }
 
@@ -33,6 +36,7 @@ public class Button : MonoBehaviour
     {
         beingPressed = false;
         Debug.Log(beingPressed);
+        button_up.Play(0);
         buttonAnimator.SetBool("IsDown", false);
     }
 }
