@@ -8,12 +8,14 @@ public class Button : MonoBehaviour
     public bool beingPressed;
     GameObject[] objectsPressing;
     Animator buttonAnimator;
+    Renderer renderer;
 
-
-    // Start is called before the first frame update
-    void Start()
+        // Start is called before the first frame update
+        void Start()
     {
-       buttonAnimator = gameObject.GetComponent<Animator>();
+        buttonAnimator = gameObject.GetComponent<Animator>();
+        renderer = gameObject.GetComponentInChildren<Renderer>();
+        renderer.material.color = new Color(1f, 0f, 0f);
     }
 
     // Update is called once per frame
