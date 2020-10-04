@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5599661277971389886}
   - component: {fileID: 5599661277971389887}
   - component: {fileID: 5599661277971389882}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: S_SouthMagneticBox
   m_TagString: Magnetic Object
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 710fc29c486ef1248a3b93cab8d1647b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

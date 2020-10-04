@@ -1064,6 +1064,11 @@ PrefabInstance:
       propertyPath: MagneticPole
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4721487715453151208, guid: a74a74e42c0201e42b116d20e8abf3ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bebc212d37c6543438e4a6f7212dedc9, type: 2}
     - target: {fileID: 4721487715453151210, guid: a74a74e42c0201e42b116d20e8abf3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1122,7 +1127,12 @@ PrefabInstance:
     - target: {fileID: 4721487715453151213, guid: a74a74e42c0201e42b116d20e8abf3ca,
         type: 3}
       propertyPath: m_Name
-      value: MagneticBoxHeavy
+      value: H_NorthMagneticBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721487715453151213, guid: a74a74e42c0201e42b116d20e8abf3ca,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a74a74e42c0201e42b116d20e8abf3ca, type: 3}

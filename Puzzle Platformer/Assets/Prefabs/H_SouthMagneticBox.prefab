@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H_SouthMagneticBox
       objectReference: {fileID: 0}
+    - target: {fileID: 6418196288559264853, guid: 2621855bbf8d5ff43916b75c72377e4e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 710fc29c486ef1248a3b93cab8d1647b, type: 2}
     - target: {fileID: 6418196288559264855, guid: 2621855bbf8d5ff43916b75c72377e4e,
         type: 3}
       propertyPath: m_LocalPosition.x
