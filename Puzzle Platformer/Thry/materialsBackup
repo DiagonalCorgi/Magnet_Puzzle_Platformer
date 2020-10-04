@@ -27,6 +27,12 @@ d4f9db1c5e3491541828ea454c63f3fd:=Standard
 
 
 
+
+
+
+
+
+
 :=Standard
 19be92826818b8a40a9bccbe3a4ab6d6:=Particles/Standard Unlit
 2a88cba1da139ff48ae552e204a6bf4c:=Particles/Standard Unlit
@@ -36,3 +42,5 @@ d4f9db1c5e3491541828ea454c63f3fd:=Standard
 f9422ca72e4fb764aadc0d622c045b35:=Standard
 bebc212d37c6543438e4a6f7212dedc9:=.poiyomi/Toon/Advanced/Opaque
 75d21b81072e48f40956cc5e6a1efce4:=.poiyomi/Toon/Advanced/Opaque
+:=Particles/Standard Unlit
+0e40a8dd18b33b74dabb5237ea25c8a2:=Custom/LadderShader

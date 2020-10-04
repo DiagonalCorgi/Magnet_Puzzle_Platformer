@@ -7,11 +7,13 @@ public class SceneSwitching : MonoBehaviour
 {
 
     public int currentScene;
+    public int nextScene;
 
     // Start is called before the first frame update
     void Start()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
+        nextScene = currentScene + 1;
     }
 
     // Update is called once per frame
@@ -21,9 +23,9 @@ public class SceneSwitching : MonoBehaviour
     }
 
 
-    public void NextScene(int currentSceneIndex)
+    public void NextScene()
     {
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        SceneManager.LoadScene(nextScene);
     }
 
     public void RestartScene()
