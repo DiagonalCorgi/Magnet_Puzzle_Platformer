@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Box 1
   m_Shader: {fileID: 4800000, guid: 45429b755005c8245b20248fbc150a0a, type: 3}
-  m_ShaderKeywords: LOD_FADE_CROSSFADE _GLOSSYREFLECTIONS_OFF
+  m_ShaderKeywords: LOD_FADE_CROSSFADE _EMISSION _GLOSSYREFLECTIONS_OFF
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -369,7 +369,7 @@ Material:
     - _EmissionMaskUV1: 0
     - _EmissionScrollingUseCurve: 0
     - _EmissionScrollingUseCurve1: 0
-    - _EmissionStrength: 0
+    - _EmissionStrength: 15.3
     - _EmissionStrength1: 0
     - _EmissiveBlink_Max: 1
     - _EmissiveBlink_Max1: 1
@@ -386,7 +386,7 @@ Material:
     - _EnableClearCoat: 0
     - _EnableDissolve: 0
     - _EnableDistortion: 0
-    - _EnableEmission: 0
+    - _EnableEmission: 1
     - _EnableEmission1: 0
     - _EnableEnvironmentalRim: 0
     - _EnableFlipbook: 0
@@ -523,8 +523,8 @@ Material:
     - _RimLightNormal: 1
     - _RimLightingInvert: 0
     - _RimSharpness: 0.25
-    - _RimStrength: 0.86
-    - _RimWidth: 0.631
+    - _RimStrength: 0.2
+    - _RimWidth: 0.45
     - _RimWidthNoiseStrength: 0.1
     - _SSSDistortion: 1
     - _SSSPower: 5
@@ -596,7 +596,7 @@ Material:
     - footer_twitter: 0
     - footer_youtube: 0
     - m_ParallaxMap: 0
-    - m_Special_Effects: 0
+    - m_Special_Effects: 1
     - m_emissionOptions: 1
     - m_end_Alpha: 0
     - m_end_Anisotropic: 0
@@ -690,7 +690,7 @@ Material:
     - m_start_distanceFade: 0
     - m_start_distortionFlow: 0
     - m_start_emission1Options: 0
-    - m_start_emissionOptions: 0
+    - m_start_emissionOptions: 1
     - m_start_flipBook: 0
     - m_start_glitter: 0
     - m_start_glitterRandom: 0
@@ -738,7 +738,7 @@ Material:
     - _DissolveToPanning: {r: 0, g: 0, b: 0, a: 0}
     - _DistortionSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _DistortionSpeed1: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _EmissionColor: {r: 1.5157166, g: 1.5157166, b: 1.5157166, a: 1}
+    - _EmissionColor: {r: 1.5157163, g: 1.5157163, b: 1.5157163, a: 1}
     - _EmissionColor1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionMapPan1: {r: 0, g: 0, b: 0, a: 0}

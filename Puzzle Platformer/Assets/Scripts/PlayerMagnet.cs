@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMagnet : MonoBehaviour
 {
@@ -10,14 +11,27 @@ public class PlayerMagnet : MonoBehaviour
     public Texture neutralBody;
     public Texture southGlow;
     public Texture northGlow;
+    public GameObject leftLeg;
+    public GameObject rightLeg;
     public GameObject bodyBase;
     public GameObject bodyGlow;
     public GameObject blueParticles;
     public GameObject redParticles;
+    public AudioSource jump;
+    public AudioSource magnet_on;
+    public AudioSource magnet_off;
+    public AudioSource magnet_switch;
+    public AudioSource die;
+
+    public SceneSwitching sceneSwitcher;
+
+    public float gBValues;
+    public float colourChangeTime = 0.1f;
 
     public Magnet magnet;
     public string playerTag;
-    public float magnetForce = 15f;
+    public float magnetForce = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +43,7 @@ public class PlayerMagnet : MonoBehaviour
         blueParticles.SetActive(false);
         playerTag = gameObject.tag;
         magnet = GetComponentInChildren<Magnet>();
+        sceneSwitcher = GameObject.Find("SceneSwitcher").GetComponent<SceneSwitching>();
     }
 
     // Update is called once per frame
@@ -52,9 +67,21 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
             redParticles.SetActive(true);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.South)
+            {
+                magnet_switch.Play(0);
+            }
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
+
         }
         if (Input.GetButtonDown("SouthPolarityPlayer1") && playerTag == "Player1")
         {
@@ -66,6 +93,18 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
             redParticles.SetActive(false);
             blueParticles.SetActive(true);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_switch.Play(0);
+            }
+            
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
@@ -79,6 +118,13 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
             redParticles.SetActive(false);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_off.Play(0);
+            }
+
             magnet.MagnetForce = 0;
             Debug.Log("Neutral");
         }
@@ -92,6 +138,17 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", northGlow);
             redParticles.SetActive(true);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.South)
+            {
+                magnet_switch.Play(0);
+            }
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.North;
             Debug.Log("North");
@@ -106,6 +163,17 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.SetTexture("_EmissionMap", southGlow);
             redParticles.SetActive(false);
             blueParticles.SetActive(true);
+
+            //play sound depending on orignal state
+            if (magnet.MagnetForce == 0)
+            {
+                magnet_on.Play(0);
+            }
+            else if (magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_switch.Play(0);
+            }
+
             magnet.MagnetForce = magnetForce;
             magnet.MagneticPole = Magnet.Pole.South;
             Debug.Log("South");
@@ -119,10 +187,43 @@ public class PlayerMagnet : MonoBehaviour
             bodyGlow.GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
             redParticles.SetActive(false);
             blueParticles.SetActive(false);
+
+            //play sound depending on orignal state
+            if (magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North)
+            {
+                magnet_off.Play(0);
+            }
+            
+
+
             magnet.MagnetForce = 0;
             Debug.Log("Neutral");
         }
 
+        if (gBValues > 1f)
+        {
+            sceneSwitcher.RestartScene();
+        }
+        else if (gBValues > 0f)
+        {
+            gBValues += 0.5f * (colourChangeTime * Time.deltaTime);
+            leftLeg.GetComponent<SpriteRenderer>().color = new Color(1f, gBValues, gBValues, 1f);
+            rightLeg.GetComponent<SpriteRenderer>().color = new Color(1f, gBValues, gBValues, 1f);
+            bodyBase.GetComponent<MeshRenderer>().material.color = new Color(1f, gBValues, gBValues, 1f);
+            bodyGlow.GetComponent<MeshRenderer>().material.color = new Color(1f, gBValues, gBValues, 1f);
+            Debug.Log(gBValues);
+        }
+
+    }
+
+    public void Die()
+    {
+        die.Play(0);
+        leftLeg.GetComponent<SpriteRenderer>().color = new Color(255f, 0f, 0f, 1f);
+        rightLeg.GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0f, 1f);
+        bodyBase.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 0f, 1f);
+        bodyGlow.GetComponent<MeshRenderer>().material.color = new Color(1, 0, 0, 1f);
+        gBValues += (1/colourChangeTime * Time.deltaTime);
 
     }
 }

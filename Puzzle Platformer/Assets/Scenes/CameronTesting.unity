@@ -26568,7 +26568,7 @@ GameObject:
   - component: {fileID: 1135765354}
   - component: {fileID: 1135765353}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Front Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26585,7 +26585,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.9
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -26642,7 +26642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135765352}
   m_LocalRotation: {x: -0.98171115, y: -0.0023718912, z: -0.02764134, w: -0.18834451}
-  m_LocalPosition: {x: -2.7445364, y: 3.5081034, z: 0}
+  m_LocalPosition: {x: -6.01, y: 5.57, z: 5.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37215,7 +37215,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 710fc29c486ef1248a3b93cab8d1647b, type: 2}
+  - {fileID: 2100000, guid: bebc212d37c6543438e4a6f7212dedc9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
