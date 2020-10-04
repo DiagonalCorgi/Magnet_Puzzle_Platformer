@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: S_NorthMagneticBox
       objectReference: {fileID: 0}
+    - target: {fileID: 8534058395490952371, guid: 7fd1dd42b25f22c4d995cfb19225797f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8534058395490952372, guid: 7fd1dd42b25f22c4d995cfb19225797f,
         type: 3}
       propertyPath: m_LocalPosition.x

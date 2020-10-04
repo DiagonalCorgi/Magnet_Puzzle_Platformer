@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5599661277971389886}
   - component: {fileID: 5599661277971389887}
   - component: {fileID: 5599661277971389882}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: S_SouthMagneticBox
   m_TagString: Magnetic Object
   m_Icon: {fileID: 0}

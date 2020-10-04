@@ -1129,6 +1129,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: H_NorthMagneticBox
       objectReference: {fileID: 0}
+    - target: {fileID: 4721487715453151213, guid: a74a74e42c0201e42b116d20e8abf3ca,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a74a74e42c0201e42b116d20e8abf3ca, type: 3}
 --- !u!4 &6418196288559264855 stripped
