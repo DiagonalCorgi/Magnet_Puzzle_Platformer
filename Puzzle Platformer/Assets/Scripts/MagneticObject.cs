@@ -6,6 +6,9 @@ public class MagneticObject : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody rb;
+    public List<string> objectsMoving;
+
+
     void Start()
     {
         
@@ -31,6 +34,8 @@ public class MagneticObject : MonoBehaviour
        
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
+            objectsMoving.Add(collision.gameObject.name);
+
             rb.isKinematic = true;
 
 
@@ -47,15 +52,21 @@ public class MagneticObject : MonoBehaviour
 
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
-            if (distance > 0.01f)
+            objectsMoving.Remove(collision.gameObject.name);
+
+            if (objectsMoving.Count == 0)
             {
-                rb.isKinematic = true;
-                Invoke("SetKinematic", 2.0f);
+                if (distance > 0.01f)
+                {
+                    rb.isKinematic = true;
+                    Invoke("SetKinematic", 2.0f);
+                }
+                else
+                {
+                    rb.isKinematic = false;
+                }
             }
-            else
-            {
-                rb.isKinematic = false;
-            }
+            
         }
     }
 }

@@ -32,4 +32,9 @@ public class SceneSwitching : MonoBehaviour
     {
         SceneManager.LoadScene(currentScene);
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
