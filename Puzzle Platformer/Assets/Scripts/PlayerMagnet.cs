@@ -120,7 +120,7 @@ public class PlayerMagnet : MonoBehaviour
             blueParticles.SetActive(false);
 
             //play sound depending on orignal state
-            if (magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North)
+            if ((magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North) && magnet.MagnetForce != 0)
             {
                 magnet_off.Play(0);
             }
@@ -189,7 +189,7 @@ public class PlayerMagnet : MonoBehaviour
             blueParticles.SetActive(false);
 
             //play sound depending on orignal state
-            if (magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North)
+            if ((magnet.MagneticPole == Magnet.Pole.South || magnet.MagneticPole == Magnet.Pole.North) && magnet.MagnetForce != 0)
             {
                 magnet_off.Play(0);
             }

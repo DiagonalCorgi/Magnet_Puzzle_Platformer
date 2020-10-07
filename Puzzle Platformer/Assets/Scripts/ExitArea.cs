@@ -12,6 +12,8 @@ public class ExitArea : MonoBehaviour
     public Image blackFade;
     float fadeOutTime;
     float fadeAmount;
+    public PlatformerMovement player1Movement;
+    public PlatformerMovement player2Movement;
 
 
     // Start is called before the first frame update
@@ -21,6 +23,8 @@ public class ExitArea : MonoBehaviour
         blackFade.color = new Color(blackFade.color.r, blackFade.color.g, blackFade.color.b, 1f);
         fadeOutTime = 0.5f;
         StartCoroutine("SceneFadeIn");
+        player1Movement = GameObject.Find("Player1").GetComponent<PlatformerMovement>();
+        player2Movement = GameObject.Find("Player2").GetComponent<PlatformerMovement>();
     }
 
     // Update is called once per frame
@@ -29,6 +33,8 @@ public class ExitArea : MonoBehaviour
         if (player1Exiting && player2Exiting)
         {
             // play fade and switch to next scene
+            player1Movement.canMove = false;
+            player2Movement.canMove = false;
             player1Exiting = false;
             StartCoroutine("SceneFadeOut");
         }

@@ -7,15 +7,18 @@ public class ChargeableSpike : MonoBehaviour
     public Button button1;
     public Button button2;
     public Magnet[] magnets;
-    public Renderer[] spikeRenderers;
+    public List<Renderer> spikeRenderers;
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Renderer spikeRenderer in spikeRenderers)
+        foreach (Renderer spikeRenderer in gameObject.GetComponentsInChildren<Renderer>())
         {
+
             spikeRenderer.material.color = new Color(0f, 0f, 0f);
+            spikeRenderer.material.DisableKeyword("_EMISSION");
+            spikeRenderers.Add(spikeRenderer);
         }
-            
+
     }
 
     // Update is called once per frame
@@ -29,7 +32,8 @@ public class ChargeableSpike : MonoBehaviour
             }
             foreach (Renderer spikeRenderer in spikeRenderers)
             {
-                spikeRenderer.material.color = new Color(1f, 0f, 0f);
+                spikeRenderer.material.color = new Color(1f, .1f, .25f);
+                spikeRenderer.material.EnableKeyword("_EMISSION");
             }
 
         }
@@ -42,6 +46,7 @@ public class ChargeableSpike : MonoBehaviour
             foreach (Renderer spikeRenderer in spikeRenderers)
             {
                 spikeRenderer.material.color = new Color(0f, 0f, 0f);
+                spikeRenderer.material.DisableKeyword("_EMISSION");
             }
         }
     }

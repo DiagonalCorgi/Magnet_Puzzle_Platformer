@@ -30,8 +30,13 @@ public class MagneticObject : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
+        Debug.Log("Hit something");
 
-       
+        if ((collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2") && (collision.gameObject.transform.position.y - gameObject.transform.position.y  < -0.9f))
+        {
+            collision.gameObject.GetComponent<PlayerMagnet>().Die();
+        }
+
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
             objectsMoving.Add(collision.gameObject.name);

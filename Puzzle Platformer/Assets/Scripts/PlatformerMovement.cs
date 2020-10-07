@@ -11,6 +11,7 @@ public class PlatformerMovement : MonoBehaviour
     bool player1;
     bool player2;
     public bool grounded;
+    public bool canMove;
     public Transform body;
 
     // Start is called before the first frame update
@@ -27,20 +28,33 @@ public class PlatformerMovement : MonoBehaviour
             player2 = true;
             Debug.Log("Player2 found");
         }
+        canMove = true;
     }
 
+
+    void FixedUpdate()
+    {
+        if (player1 && canMove)
+        {
+            MovePlayer(1);
+        }
+        else if (player2 && canMove)
+        {
+            MovePlayer(2);
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (player1)
+        if(player1 && canMove)
         {
-            MovePlayer(1);
+            JumpPlayer(1);
         }
-        else if (player2)
+        else if (player2 && canMove)
         {
-            MovePlayer(2);
+            JumpPlayer(2);
         }
 
         RaycastHit hit;
@@ -84,6 +98,11 @@ public class PlatformerMovement : MonoBehaviour
                 }
             }
         }
+        
+    }
+
+    public void JumpPlayer(int player)
+    {
         if (!Input.GetButton("HorizontalPlayer" + player) && grounded)
         {
             rigidbody.velocity = rigidbody.velocity * 0.9f;
@@ -93,7 +112,7 @@ public class PlatformerMovement : MonoBehaviour
         {
             if (Input.GetAxis("VerticalPlayer" + player) > 0f)
             {
-                
+
                 if (grounded)
                 {
                     GetComponent<Animator>().SetTrigger("Jump");

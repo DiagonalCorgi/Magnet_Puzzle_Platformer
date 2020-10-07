@@ -81,68 +81,68 @@ public class MagnetWorld : MonoBehaviour
 
   }
 
-  void OnDrawGizmos()
-  {
-    var magnets = FindObjectsOfType<Magnet>();
-    var magCount = magnets.Length;
-    var randPts = new List<Vector3>();
+    //void OnDrawGizmos()
+    //{
+    //    var magnets = FindObjectsOfType<Magnet>();
+    //    var magCount = magnets.Length;
+    //    var randPts = new List<Vector3>();
 
-    for (int i = 0; i < 100; i++)
-    {
-      var unitPt = Random.insideUnitSphere;
+    //    for (int i = 0; i < 100; i++)
+    //    {
+    //        var unitPt = Random.insideUnitSphere;
 
-    }
+    //    }
 
-    if (Selection.activeTransform == null)
-      return;
-    var selectedMagnets = Selection.activeTransform.gameObject.GetComponentsInChildren<Magnet>();
-    if (selectedMagnets.Length == 0 || selectedMagnets.Length > 20)
-      return;
-    for (int i = 0; i < selectedMagnets.Length; i++)
-    {
-      var m1 = selectedMagnets[i];
-      var scale1 = 0.35f / 0.5f;
-      if (UseScaleForDebugDraw)
-        scale1 *= m1.transform.parent.lossyScale.x * (m1.MagnetForce / 50.0f);
-      if (m1.MagneticPole == Magnet.Pole.North)
-      {
-        Gizmos.color = new Color(0.0f, 0.0f, 1.0f, 0.25f);
-        Gizmos.DrawSphere(m1.transform.position, scale1);
+    //    if (Selection.activeTransform == null)
+    //        return;
+    //    var selectedMagnets = Selection.activeTransform.gameObject.GetComponentsInChildren<Magnet>();
+    //    if (selectedMagnets.Length == 0 || selectedMagnets.Length > 20)
+    //        return;
+    //    for (int i = 0; i < selectedMagnets.Length; i++)
+    //    {
+    //        var m1 = selectedMagnets[i];
+    //        var scale1 = 0.35f / 0.5f;
+    //        if (UseScaleForDebugDraw)
+    //            scale1 *= m1.transform.parent.lossyScale.x * (m1.MagnetForce / 50.0f);
+    //        if (m1.MagneticPole == Magnet.Pole.North)
+    //        {
+    //            Gizmos.color = new Color(0.0f, 0.0f, 1.0f, 0.25f);
+    //            Gizmos.DrawSphere(m1.transform.position, scale1);
 
-      }
-      else
-      {
-        Gizmos.color = new Color(1.0f, 0.0f, 0.0f, 0.25f);
-        Gizmos.DrawSphere(m1.transform.position, scale1);
+    //        }
+    //        else
+    //        {
+    //            Gizmos.color = new Color(1.0f, 0.0f, 0.0f, 0.25f);
+    //            Gizmos.DrawSphere(m1.transform.position, scale1);
 
-      }
+    //        }
 
-      for (int j = 0; j < magCount; j++)
-      {
-        var m2 = magnets[j];
+    //        for (int j = 0; j < magCount; j++)
+    //        {
+    //            var m2 = magnets[j];
 
-        if (m1 == m2)
-          continue;
+    //            if (m1 == m2)
+    //                continue;
 
-        if (m2.MagnetForce < 5.0f)
-          continue;
+    //            if (m2.MagnetForce < 5.0f)
+    //                continue;
 
-        if (m1.transform.parent == m2.transform.parent)
-          continue;
-        
-        var f = CalculateGilbertForce(m1, m2);
+    //            if (m1.transform.parent == m2.transform.parent)
+    //                continue;
 
-        if (m2.MagneticPole == Magnet.Pole.North)
-        {
-          Gizmos.color = Color.cyan;
-        }
-        else
-        {
-          Gizmos.color = Color.red;
-        }
+    //            var f = CalculateGilbertForce(m1, m2);
 
-        Gizmos.DrawLine(m1.transform.position, m1.transform.position + f);
-      }
-    }
-  }
+    //            if (m2.MagneticPole == Magnet.Pole.North)
+    //            {
+    //                Gizmos.color = Color.cyan;
+    //            }
+    //            else
+    //            {
+    //                Gizmos.color = Color.red;
+    //            }
+
+    //            Gizmos.DrawLine(m1.transform.position, m1.transform.position + f);
+    //        }
+    //    }
+    //}
 }
