@@ -7,17 +7,56 @@ public class MagneticObject : MonoBehaviour
     // Start is called before the first frame update
     public Rigidbody rb;
     public List<string> objectsMoving;
+    GameObject playerOne;
+    GameObject playerTwo;
+
+
+    bool playerOneTouching;
+    bool playerTwoTouching;
 
 
     void Start()
     {
-        
+        playerOne = GameObject.Find("Player1");
+        playerTwo = GameObject.Find("Player2");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (playerOneTouching)
+        {
+            Magnet magnet = playerOne.GetComponentInChildren<Magnet>();
+            if (playerOne.GetComponent<Rigidbody>().velocity.magnitude <= 0.01f)
+            {
+                rb.isKinematic = false;
+            }
+            else if (magnet.MagnetForce > 0f)
+            {
+                rb.isKinematic = false;
+            }
+            else
+            {
+                rb.isKinematic = true;
+            }
+        }
+        if (playerTwoTouching)
+        {
+            Magnet magnet = playerTwo.GetComponentInChildren<Magnet>();
+            if (playerTwo.GetComponent<Rigidbody>().velocity.magnitude <= 0.01f)
+            {
+                rb.isKinematic = false;
+            }
+            else if (magnet.MagnetForce > 0f)
+            {
+                rb.isKinematic = false;
+            }
+            else
+            {
+                rb.isKinematic = true;
+            }
+        }
 
     }
 
@@ -37,11 +76,30 @@ public class MagneticObject : MonoBehaviour
             collision.gameObject.GetComponent<PlayerMagnet>().Die();
         }
 
+        if (collision.gameObject.tag == "Player1")
+        {
+            playerOneTouching = true;
+        }
+
+        else if (collision.gameObject.tag == "Player2")
+        {
+            playerTwoTouching = true;
+        }
+
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
-            objectsMoving.Add(collision.gameObject.name);
+            Magnet magnet = collision.gameObject.GetComponentInChildren<Magnet>();
+            if (magnet.MagnetForce > 0f)
+            {
+                rb.isKinematic = false;
+            }
+            else
+            {
+                objectsMoving.Add(collision.gameObject.name);
 
-            rb.isKinematic = true;
+                rb.isKinematic = true;
+
+            }
 
 
         }   
@@ -54,6 +112,15 @@ public class MagneticObject : MonoBehaviour
         float distance;
         Physics.ComputePenetration(collision.other.GetComponent<Collider>(), collision.other.transform.position + Vector3.down * 0.5f, collision.other.transform.rotation, gameObject.GetComponent<Collider>(), transform.position, transform.rotation, out collisionDirection, out distance);
 
+        if (collision.gameObject.tag == "Player1")
+        {
+            playerOneTouching = false;
+        }
+
+        else if (collision.gameObject.tag == "Player2")
+        {
+            playerTwoTouching = false;
+        }
 
         if (collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
         {
@@ -71,7 +138,7 @@ public class MagneticObject : MonoBehaviour
                     rb.isKinematic = false;
                 }
             }
-            
+
         }
     }
 }
