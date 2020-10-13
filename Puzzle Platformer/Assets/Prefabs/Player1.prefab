@@ -4765,7 +4765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94311413}
   - component: {fileID: 94311414}
-  m_Layer: 18
+  m_Layer: 14
   m_Name: P1_RedRepulsion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5324,7 +5324,7 @@ GameObject:
   - component: {fileID: 272284353}
   - component: {fileID: 272284355}
   - component: {fileID: 272284354}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Blue Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10078,7 +10078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300379421}
   - component: {fileID: 300379422}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P1_BlueAttraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15358,7 +15358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668501638}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P1_RedForcefield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20182,7 +20182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1031061962}
   - component: {fileID: 1031061963}
-  m_Layer: 18
+  m_Layer: 12
   m_Name: P1_BlueRepulsion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30251,7 +30251,7 @@ GameObject:
   - component: {fileID: 1409745129}
   - component: {fileID: 1409745131}
   - component: {fileID: 1409745130}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: BlueMinus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35006,7 +35006,7 @@ GameObject:
   - component: {fileID: 1675117432}
   - component: {fileID: 1675117434}
   - component: {fileID: 1675117433}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Blue Circles Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39760,7 +39760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688173218}
   - component: {fileID: 1688173219}
-  m_Layer: 18
+  m_Layer: 14
   m_Name: P1_RedAttraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40287,7 +40287,7 @@ GameObject:
   - component: {fileID: 1797260814}
   - component: {fileID: 1797260816}
   - component: {fileID: 1797260815}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Big Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45040,7 +45040,7 @@ GameObject:
   - component: {fileID: 1806548676}
   - component: {fileID: 1806548678}
   - component: {fileID: 1806548677}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Big Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

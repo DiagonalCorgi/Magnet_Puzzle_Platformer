@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 36679691}
   - component: {fileID: 36679693}
   - component: {fileID: 36679692}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Blue Circles Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4801,7 +4801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 296136623}
   - component: {fileID: 296136624}
-  m_Layer: 18
+  m_Layer: 15
   m_Name: P2_RedRepulsion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5328,7 +5328,7 @@ GameObject:
   - component: {fileID: 495645336}
   - component: {fileID: 495645338}
   - component: {fileID: 495645337}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Big Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10081,7 +10081,7 @@ GameObject:
   - component: {fileID: 539806232}
   - component: {fileID: 539806234}
   - component: {fileID: 539806233}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Big Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29130,7 +29130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 937407585}
   - component: {fileID: 937407586}
-  m_Layer: 18
+  m_Layer: 15
   m_Name: P2_RedAttraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29657,7 +29657,7 @@ GameObject:
   - component: {fileID: 995269010}
   - component: {fileID: 995269012}
   - component: {fileID: 995269011}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: Blue Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34443,7 +34443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077905805}
   - component: {fileID: 1077905806}
-  m_Layer: 18
+  m_Layer: 13
   m_Name: P2_BlueAttraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39725,7 +39725,7 @@ GameObject:
   - component: {fileID: 1210226220}
   - component: {fileID: 1210226222}
   - component: {fileID: 1210226221}
-  m_Layer: 18
+  m_Layer: 1
   m_Name: BlueMinus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49234,7 +49234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799667625}
   - component: {fileID: 1799667626}
-  m_Layer: 18
+  m_Layer: 13
   m_Name: P2_BlueRepulsion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49759,7 +49759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2010402444}
-  m_Layer: 18
+  m_Layer: 13
   m_Name: P2_BlueForcefield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
