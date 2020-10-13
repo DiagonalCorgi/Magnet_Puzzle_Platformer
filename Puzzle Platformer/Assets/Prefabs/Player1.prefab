@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 91191736}
   - component: {fileID: 91191738}
   - component: {fileID: 91191737}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Red Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4765,7 +4765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94311413}
   - component: {fileID: 94311414}
-  m_Layer: 14
+  m_Layer: 18
   m_Name: P1_RedRepulsion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5290,7 +5290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 211344157}
-  m_Layer: 12
+  m_Layer: 18
   m_Name: P1_BlueForcefield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5324,7 +5324,7 @@ GameObject:
   - component: {fileID: 272284353}
   - component: {fileID: 272284355}
   - component: {fileID: 272284354}
-  m_Layer: 1
+  m_Layer: 18
   m_Name: Blue Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10078,7 +10078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300379421}
   - component: {fileID: 300379422}
-  m_Layer: 12
+  m_Layer: 18
   m_Name: P1_BlueAttraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10605,7 +10605,7 @@ GameObject:
   - component: {fileID: 616058264}
   - component: {fileID: 616058266}
   - component: {fileID: 616058265}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Red Circles Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15358,7 +15358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668501638}
-  m_Layer: 12
+  m_Layer: 18
   m_Name: P1_RedForcefield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15390,7 +15390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 752677092}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: P1_BlueParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15428,7 +15428,7 @@ GameObject:
   - component: {fileID: 1001195152}
   - component: {fileID: 1001195154}
   - component: {fileID: 1001195153}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: RedPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20182,7 +20182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1031061962}
   - component: {fileID: 1031061963}
-  m_Layer: 12
+  m_Layer: 18
   m_Name: P1_BlueRepulsion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20709,7 +20709,7 @@ GameObject:
   - component: {fileID: 1165857517}
   - component: {fileID: 1165857519}
   - component: {fileID: 1165857518}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Big Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25462,7 +25462,7 @@ GameObject:
   - component: {fileID: 1187502299}
   - component: {fileID: 1187502301}
   - component: {fileID: 1187502300}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Big Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30213,7 +30213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1406367645}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: P1_RedParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30251,7 +30251,7 @@ GameObject:
   - component: {fileID: 1409745129}
   - component: {fileID: 1409745131}
   - component: {fileID: 1409745130}
-  m_Layer: 1
+  m_Layer: 18
   m_Name: BlueMinus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35006,7 +35006,7 @@ GameObject:
   - component: {fileID: 1675117432}
   - component: {fileID: 1675117434}
   - component: {fileID: 1675117433}
-  m_Layer: 1
+  m_Layer: 18
   m_Name: Blue Circles Fade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39760,7 +39760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688173218}
   - component: {fileID: 1688173219}
-  m_Layer: 14
+  m_Layer: 18
   m_Name: P1_RedAttraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40287,7 +40287,7 @@ GameObject:
   - component: {fileID: 1797260814}
   - component: {fileID: 1797260816}
   - component: {fileID: 1797260815}
-  m_Layer: 1
+  m_Layer: 18
   m_Name: Big Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45040,7 +45040,7 @@ GameObject:
   - component: {fileID: 1806548676}
   - component: {fileID: 1806548678}
   - component: {fileID: 1806548677}
-  m_Layer: 1
+  m_Layer: 18
   m_Name: Big Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49792,7 +49792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151508193749481999}
   - component: {fileID: 2151508193749481998}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49875,7 +49875,7 @@ GameObject:
   - component: {fileID: 2151508193849869425}
   - component: {fileID: 2151508193849869423}
   - component: {fileID: 2151508193849869424}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: LegPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49951,7 +49951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2151508194386616972}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49984,7 +49984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151508194446407778}
   - component: {fileID: 2151508194446407777}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50063,7 +50063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2151508194515329922}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: LegLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50095,7 +50095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151508194540806393}
   - component: {fileID: 2151508194540806392}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50186,7 +50186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151508194894782349}
   - component: {fileID: 2151508194894782348}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Magnet
   m_TagString: Player1
   m_Icon: {fileID: 0}
@@ -50233,7 +50233,7 @@ GameObject:
   - component: {fileID: 2151508194933996987}
   - component: {fileID: 2151508194933996985}
   - component: {fileID: 2151508194933996986}
-  m_Layer: 2
+  m_Layer: 18
   m_Name: BodyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50309,7 +50309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2151508195276319829}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: LegRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50342,7 +50342,7 @@ GameObject:
   - component: {fileID: 2151508195284174377}
   - component: {fileID: 2151508195284174375}
   - component: {fileID: 2151508195284174376}
-  m_Layer: 2
+  m_Layer: 18
   m_Name: BodyGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50419,7 +50419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151508195300200096}
   - component: {fileID: 2151508195300200095}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: leg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50500,7 +50500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151508195440556296}
   - component: {fileID: 2151508195440556295}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50592,7 +50592,7 @@ GameObject:
   - component: {fileID: 652395867}
   - component: {fileID: 652395856}
   - component: {fileID: 547628369}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Player1
   m_TagString: Player1
   m_Icon: {fileID: 0}
@@ -50653,6 +50653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 0
+  canMove: 0
   body: {fileID: 0}
 --- !u!54 &2151508195460846587
 Rigidbody:
@@ -51240,7 +51241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151508195524200932}
   - component: {fileID: 2151508195524200931}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51289,7 +51290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2151508195551454662}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

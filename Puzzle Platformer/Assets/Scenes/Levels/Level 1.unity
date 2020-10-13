@@ -1188,7 +1188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -4.49, y: 3.19}
+  m_AnchoredPosition: {x: -4.49, y: 3.47}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1249761216
@@ -2150,9 +2150,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Player 2 Controls:\n\nMovement:\nUp Key - Jump\nLeft Key - Left\nRight
-    Key - Right\n\nPolarity:\nComma (,) - Red (North)\nFull Stop (.) - Neutral (None)
-    \nSlash (/)- Blue (South)"
+  m_Text: "Player 2 Controls:\n\nMovement:\nUp Key - Jump / Up Ladders\nLeft Key -
+    Left\nDown Key - Down Ladders\nRight Key - Right\n\nPolarity:\nComma (,) - Red
+    (Positive)\nFull Stop (.) - Neutral (None) \nSlash (/)- Blue (Negative)"
 --- !u!222 &2042253546
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2321,8 +2321,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Player 1 Controls:\n\nMovement:\nW - Jump\nA - Left\nD - Right\n\nPolarity:\nG
-    - Red (North)\nH - Neutral (None) \nJ - Blue (South)"
+  m_Text: "Player 1 Controls:\n\nMovement:\nW - Jump / Up Ladders\nA - Left\nS - Down
+    Ladders\nD - Right\n\nPolarity:\nG - Red (Positive)\nH - Neutral (None) \nJ -
+    Blue (Negative)"
 --- !u!222 &2147037002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2425,6 +2426,75 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &987294611646220696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 987294610409107060, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_Name
+      value: EndZoneCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4282154
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 987294610409107062, guid: 55ba740868de3234bbc2df24d2e2a20b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 55ba740868de3234bbc2df24d2e2a20b, type: 3}
 --- !u!1 &1502157741561091609
 GameObject:
   m_ObjectHideFlags: 0
